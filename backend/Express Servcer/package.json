@@ -1,0 +1,23 @@
+{
+  "name": "express-servcer",
+  "version": "1.0.0",
+  "description": "This is express server",
+  "homepage": "https://github.com/ghanshyam-du/Webdev_prap#readme",
+  "bugs": {
+    "url": "https://github.com/ghanshyam-du/Webdev_prap/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghanshyam-du/Webdev_prap.git"
+  },
+  "license": "ISC",
+  "author": "Ghanshyam Dubey",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
