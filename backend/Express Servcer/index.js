@@ -6,10 +6,10 @@ app.get("/", (req, res)=>{
     res.send("Hi i am here!, Nice to meet u.");
 })
 app.get("/contact",(req,res)=>{
-    res.send("Hi this is the contact page and my contace number is : 90995583265")
+    res.send("Hi this is the contact page and my contace number is : My number ")
 })
 app.get("/home",(req,res)=>{
-    res.send("Hi this is home page and wellcome")
+    res.send("Hi this is home page and welcome")
 })
 
 app.post("/test",(req,res)=>{
