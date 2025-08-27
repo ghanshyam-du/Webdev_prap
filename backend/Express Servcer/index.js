@@ -2,6 +2,10 @@ import express from "express";
 const app = express();
 const port = 3000;
 
+app.use((req, res, next)=>{
+    console.log("hi this is first middleware 1");
+    next();
+})
 app.get("/", (req, res)=>{
     res.send("Hi i am here!, Nice to meet u.");
 })
