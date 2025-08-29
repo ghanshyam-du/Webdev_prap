@@ -28,7 +28,7 @@ app.use((req, res, next) => {
     //  return res.json({msg: "hello from middleware 1"}); 
     // return res.end("kya re ");
 
-    fs.appendFile("log.txt", `${Date.now()}: ${req.method} : ${req.path}`, (err, data) => {
+    fs.appendFile("log.txt", `${Date.now()} : ${req.method} : ${req.path}`,(err, data) => {
         next();
     })
 
