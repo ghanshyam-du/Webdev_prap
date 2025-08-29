@@ -21,34 +21,34 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const app = express();
 const port = 3000;
-app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use((req, res, next)=>{
- console.log("Hello from middleware 1"); 
-//  return res.json({msg: "hello from middleware 1"}); 
-// return res.end("kya re ");
+app.use((req, res, next) => {
+    console.log("Hello from middleware 1");
+    //  return res.json({msg: "hello from middleware 1"}); 
+    // return res.end("kya re ");
 
-fs.appendFile("log.txt", `${Date.now()}: ${req.method} : ${req.path}`, (err, data)=>{
-    next();
+    fs.appendFile("log.txt", `${Date.now()}: ${req.method} : ${req.path}`, (err, data) => {
+        next();
+    })
+
+
 })
- 
-
-})
 
 
-app.use((req, res, next)=>{
+app.use((req, res, next) => {
     console.log("hello from middleware 2");
-    
+
 })
 
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+    res.sendFile(__dirname + "/public/index.html");
 });
-app.post("/submit",(req,res)=>{
-  console.log(req.body);
-   res.send("Band name received");
+app.post("/submit", (req, res) => {
+    console.log(req.body);
+    res.send("Band name received");
 })
 
 app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
+    console.log(`Listening on port ${port}`);
 });
