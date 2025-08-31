@@ -1,0 +1,6 @@
+Schema - define the structure 
+   using this schema we try to made models 
+   and using that model we used to doo crud operations
+
+   saxHtNAyMqyni1zT
+   ghanshyamd5402_db_user
