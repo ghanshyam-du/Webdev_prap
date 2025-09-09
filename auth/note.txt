@@ -1,0 +1,9 @@
+Authentication - the process of verifying who a user is.(it checks whether the person trying to access a system is actually the one they claim to be.)
+
+Authentication patterns:-  
+  ** Statefull - which maintains state or data or server side
+      how to transfer uid(unique id) - cookies, response, headers.
+
+      work flow
+      client ----> auth middleware(checks for cookie value of uid, if valid calls next() else rejects the request) ---> endpoint route
+  ** stateless - which has no state 
