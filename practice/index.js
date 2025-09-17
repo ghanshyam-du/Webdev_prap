@@ -3,6 +3,9 @@ const app = express();
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}))
 const port = 3000;
+
+
+
 app.use((req, res, next)=>{
  console.log("Hello from middleware 1"); 
 
